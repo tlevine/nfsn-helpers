@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+import os
 from lxml.html import fromstring
 from requests import session
 s = session()
@@ -79,4 +80,4 @@ params = {
     'texytext_null': 'NULL',
     'yaml_structure_or_data': 'data',
 }
-sql = s.post('https://phpmyadmin.nearlyfreespeech.net/export.php', params)
+print s.post('https://phpmyadmin.nearlyfreespeech.net/export.php', params).text
